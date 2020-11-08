@@ -15,7 +15,7 @@ client.on('message', (message) => {
   }
 
   if(message.content == 'd!위도우') {
-    let img = 'https://cdn.discordapp.com/icons/419671192857739264/6dccc22df4cb0051b50548627f36c09b.webp?size=256';
+    let img = 'https://cdn.discordapp.com/attachments/767267369503948851/775003422217863168/DICE.png';
     let embed = new Discord.RichEmbed()
       .setTitle(' `위도우메이커` ')
       .addBlankField()
