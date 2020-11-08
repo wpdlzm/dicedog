@@ -19,7 +19,7 @@ client.on('message', (message) => {
     let embed = new Discord.RichEmbed()
       .setTitle(' `위도우메이커` ')
       .addBlankField()
-      .setThumbnail(img)
+      .setImage(img)
       .addBlankField()
       .setTimestamp()
       .setFooter('Made by KADE')
