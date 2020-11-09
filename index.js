@@ -4,7 +4,8 @@ const token = process.argv.length == 2 ? process.env.token : "";
 
 client.on('ready', () => {
   console.log('ON');
-  client.user.setPresence({ game: { name: '모든문의 : KADE#7777' }, status: 'online' })
+  client.user.setPresence({ game: { name: 'd!help' }, status: 'online' })
+  client.user.setPresence({ game: { name: '모든문의는 KADE#7777' }, status: 'online' })
 });
 
 client.on('message', (message) => {
@@ -14,11 +15,21 @@ client.on('message', (message) => {
     return message.reply('ok');
   }
 
-  if(message.content == 'd!위도우') {
+  if(message.content == 'd!help') {
+    let img = 'https://cdn.discordapp.com/attachments/773839697985667094/775173348971118632/DICE_HELP.PNG';
+    let embed = new Discord.RichEmbed()
+      .setTitle('DICE 꿀값봇 명령어')
+      .setImage(img)
+      .addBlankField()
+      .setTimestamp()
+      .setFooter('Made by KADE')
+
+    message.channel.send(embed)
+  } else if(message.content == 'd!애쉬') {
     let img = 'https://cdn.discordapp.com/attachments/767267369503948851/775003422217863168/DICE.png';
     let img1 = '';
     let embed = new Discord.RichEmbed()
-      .setTitle(' `위도우메이커` ')
+      .setTitle(' `애쉬` ')
       .setThumbnail(img)
       .setImage(img)
       .addBlankField()
@@ -38,11 +49,11 @@ client.on('message', (message) => {
       .setFooter('Made by KADE')
 
     message.channel.send(embed)
-  } else if(message.content == 'd!애쉬') {
+  } else if(message.content == 'd!위도우') {
     let img = 'https://cdn.discordapp.com/attachments/767267369503948851/775003422217863168/DICE.png';
     let img1 = '';
     let embed = new Discord.RichEmbed()
-      .setTitle(' `애쉬` ')
+      .setTitle(' `위도우메이커` ')
       .setThumbnail(img)
       .setImage(img)
       .addBlankField()
