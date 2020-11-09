@@ -16,9 +16,10 @@ client.on('message', (message) => {
 
   if(message.content == 'd!위도우') {
     let img = 'https://cdn.discordapp.com/attachments/767267369503948851/775003422217863168/DICE.png';
+    let img1 = '';
     let embed = new Discord.RichEmbed()
       .setTitle(' `위도우메이커` ')
-      .addBlankField()
+      .setThumbnail(img)
       .setImage(img)
       .addBlankField()
       .setTimestamp()
@@ -26,11 +27,60 @@ client.on('message', (message) => {
 
     message.channel.send(embed)
   } else if(message.content == 'd!맥크리') {
-    let img = 'https://cdn.discordapp.com/icons/419671192857739264/6dccc22df4cb0051b50548627f36c09b.webp?size=256';
+    let img = 'https://cdn.discordapp.com/attachments/767267369503948851/775003422217863168/DICE.png';
+    let img1 = '';
     let embed = new Discord.RichEmbed()
       .setTitle(' `맥크리` ')
+      .setThumbnail(img)
+      .setImage(img)
       .addBlankField()
-      .addField(img)
+      .setTimestamp()
+      .setFooter('Made by KADE')
+
+    message.channel.send(embed)
+  } else if(message.content == 'd!애쉬') {
+    let img = 'https://cdn.discordapp.com/attachments/767267369503948851/775003422217863168/DICE.png';
+    let img1 = '';
+    let embed = new Discord.RichEmbed()
+      .setTitle(' `애쉬` ')
+      .setThumbnail(img)
+      .setImage(img)
+      .addBlankField()
+      .setTimestamp()
+      .setFooter('Made by KADE')
+
+    message.channel.send(embed)
+  } else if(message.content == 'd!겐지') {
+    let img = 'https://cdn.discordapp.com/attachments/767267369503948851/775003422217863168/DICE.png';
+    let img1 = '';
+    let embed = new Discord.RichEmbed()
+      .setTitle(' `겐지` ')
+      .setThumbnail(img)
+      .setImage(img)
+      .addBlankField()
+      .setTimestamp()
+      .setFooter('Made by KADE')
+
+    message.channel.send(embed)
+  } else if(message.content == 'd!트레') {
+    let img = 'https://cdn.discordapp.com/attachments/767267369503948851/775003422217863168/DICE.png';
+    let img1 = '';
+    let embed = new Discord.RichEmbed()
+      .setTitle(' `트레이서` ')
+      .setThumbnail(img)
+      .setImage(img)
+      .addBlankField()
+      .setTimestamp()
+      .setFooter('Made by KADE')
+
+    message.channel.send(embed)
+  } else if(message.content == 'd!한조') {
+    let img = 'https://cdn.discordapp.com/attachments/767267369503948851/775003422217863168/DICE.png';
+    let img1 = '';
+    let embed = new Discord.RichEmbed()
+      .setTitle(' `한조` ')
+      .setThumbnail(img)
+      .setImage(img)
       .addBlankField()
       .setTimestamp()
       .setFooter('Made by KADE')
