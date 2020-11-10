@@ -35,29 +35,13 @@ client.on('message', (message) => {
     embed.addField('Commands: ', commandStr);
 
     message.channel.send(embed)
-  } else if(message.content == '!hwid',hwid) {
-    let hwid = ''
-    let img = 'https://cdn.discordapp.com/attachments/775519421476765748/775656213228290068/1__6_-removebg-preview.png';
-    let embed = new Discord.RichEmbed()
-      .setTitle('HWID')
-      .setThumbnail(img)
-      .addBlankField()
-      .addField('좀만 기달려주세요 . . .', '곧 하드락이 해제될 것입니다')
-      .addBlankField()
-      .setTimestamp()
-      .setFooter('Made By KADE#7777', img)
-
-    message.channel.send(embed)
+   
   } else if(message.content == '!certified') {
     let Img = 'https://cdn.discordapp.com/attachments/775696488785117216/775696593897914368/411823403469635594.png';
     if(message.channel.type == 'dm') {
       return message.reply(Img);
     }
-  } else if(message.content == '!certified') {
-      let Img = 'https://cdn.discordapp.com/attachments/775696488785117216/775696596808499210/417492246271623178.png';
-      if(message.channel.type == 'dm') {
-        return message.reply(Img);
-      }
+  
       
       var clearLine = message.content.slice('!청소'.length);
     var isNum = !isNaN(clearLine)
