@@ -37,7 +37,7 @@ client.on('message', (message) => {
   } else if(message.content == '!certified') {
     let Img = 'https://cdn.discordapp.com/attachments/767267356761784340/775672297579216916/unknown.png';
     if(message.channel.type == 'dm') {
-      return message.reply('입력해주세요', Img);
+      return message.reply(Img);
     }
   }
   if(message.content.startsWith('!청소')) {
