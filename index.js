@@ -4,7 +4,7 @@ const token = process.argv.length == 2 ? process.env.token : "";
 
 client.on('ready', () => {
   console.log('ON');
-  client.user.setPresence({ game: { name: 'LOVE Vincent' }, status: 'offline' })
+  client.user.setPresence({ game: { name: 'LOVE Vincent' }, status: 'online' })
 });
 
 const verifyj = JSON.parse(fs.readFileSync("./verify.json", "utf8"))
