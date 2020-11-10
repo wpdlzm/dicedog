@@ -11,7 +11,7 @@ const verifyj = JSON.parse(fs.readFileSync("./verify.json", "utf8"))
 
 client.on('message', async message => {
     let messageArray = message.content.split(" ");
-   if(message.content === `${prefix}setcaptcha`) {
+   if(message.content === `!setcaptcha`) {
         
     let filter = m => m.author.id === message.author.id;
     let ch;
