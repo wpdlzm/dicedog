@@ -18,6 +18,7 @@ client.on('message', (message) => {
     let helpImg = 'https://cdn.discordapp.com/attachments/775519421476765748/775656213228290068/1__6_-removebg-preview.png';
     let commandList = [
       {name: '!인증', desc: '인증'},
+      {name: '!invite', desc: '초대코드'},
       {name: '!hwid id pw', desc: 'hwid을 재설정'},
     ];
     let commandStr = '';
@@ -32,7 +33,7 @@ client.on('message', (message) => {
       commandStr += `• \`\`${changeCommandStringLength(`${x.name}`)}\`\` : **${x.desc}**\n`;
     });
 
-    embed.addField('Commands: ', commandStr);
+    embed.addField('Commands', commandStr);
 
     message.channel.send(embed)
    
