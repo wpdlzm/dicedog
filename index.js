@@ -1,14 +1,16 @@
 const Discord = require('discord.js');
 const client = new Discord.Client();
 const token = process.argv.length == 2 ? process.env.token : "";
-prefix = '!' ;
+const prefix = "!" ;
+const fs = require('fs');
+const verifyj = JSON.parse(fs.readFileSync("./verify.json", "utf8"))
 
 client.on('ready', () => {
   console.log('ON');
   client.user.setPresence({ game: { name: 'LOVE Vincent' }, status: 'online' })
 });
 
-const verifyj = JSON.parse(fs.readFileSync("./verify.json", "utf8"))
+
 
 client.on('message', async message => {
     let messageArray = message.content.split(" ");
