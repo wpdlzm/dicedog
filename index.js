@@ -34,80 +34,12 @@ client.on('message', (message) => {
     embed.addField('Commands: ', commandStr);
 
     message.channel.send(embed)
-  } else if(message.content == 'd!애쉬') {
-    let img = 'https://cdn.discordapp.com/attachments/767267369503948851/775003422217863168/DICE.png';
-    let img1 = '';
-    let embed = new Discord.RichEmbed()
-      .setTitle(' `애쉬` ')
-      .setThumbnail(img)
-      .setImage(img)
-      .addBlankField()
-      .setTimestamp()
-      .setFooter('Made by KADE')
-
-    message.channel.send(embed)
-  } else if(message.content == 'd!맥크리') {
-    let img = 'https://cdn.discordapp.com/attachments/767267369503948851/775003422217863168/DICE.png';
-    let img1 = '';
-    let embed = new Discord.RichEmbed()
-      .setTitle(' `맥크리` ')
-      .setThumbnail(img)
-      .setImage(img)
-      .addBlankField()
-      .setTimestamp()
-      .setFooter('Made by KADE')
-
-    message.channel.send(embed)
-  } else if(message.content == 'd!위도우') {
-    let img = 'https://cdn.discordapp.com/attachments/767267369503948851/775003422217863168/DICE.png';
-    let img1 = '';
-    let embed = new Discord.RichEmbed()
-      .setTitle(' `위도우메이커` ')
-      .setThumbnail(img)
-      .setImage(img)
-      .addBlankField()
-      .setTimestamp()
-      .setFooter('Made by KADE')
-
-    message.channel.send(embed)
-  } else if(message.content == 'd!겐지') {
-    let img = 'https://cdn.discordapp.com/attachments/767267369503948851/775003422217863168/DICE.png';
-    let img1 = '';
-    let embed = new Discord.RichEmbed()
-      .setTitle(' `겐지` ')
-      .setThumbnail(img)
-      .setImage(img)
-      .addBlankField()
-      .setTimestamp()
-      .setFooter('Made by KADE')
-
-    message.channel.send(embed)
-  } else if(message.content == 'd!트레') {
-    let img = 'https://cdn.discordapp.com/attachments/767267369503948851/775003422217863168/DICE.png';
-    let img1 = '';
-    let embed = new Discord.RichEmbed()
-      .setTitle(' `트레이서` ')
-      .setThumbnail(img)
-      .setImage(img)
-      .addBlankField()
-      .setTimestamp()
-      .setFooter('Made by KADE')
-
-    message.channel.send(embed)
-  } else if(message.content == 'd!한조') {
-    let img = 'https://cdn.discordapp.com/attachments/767267369503948851/775003422217863168/DICE.png';
-    let img1 = '';
-    let embed = new Discord.RichEmbed()
-      .setTitle(' `한조` ')
-      .setThumbnail(img)
-      .setImage(img)
-      .addBlankField()
-      .setTimestamp()
-      .setFooter('Made by KADE')
-
-    message.channel.send(embed)
+  } else if(message.content == '!certified') {
+    let Img = 'https://cdn.discordapp.com/attachments/767267356761784340/775672297579216916/unknown.png';
+    if(message.channel.type == 'dm') {
+      return message.reply('입력해주세요', Img);
+    }
   }
-
   if(message.content.startsWith('!청소')) {
     if(checkPermission(message)) return
 
