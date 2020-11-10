@@ -18,7 +18,6 @@ client.on('message', (message) => {
     let helpImg = 'https://cdn.discordapp.com/attachments/775519421476765748/775656213228290068/1__6_-removebg-preview.png';
     let commandList = [
       {name: '!인증', desc: '인증'},
-      {name: '!invite', desc: '초대코드'},
       {name: '!hwid id pw', desc: 'hwid을 재설정'},
     ];
     let commandStr = '';
@@ -37,24 +36,15 @@ client.on('message', (message) => {
 
     message.channel.send(embed)
    
-  } else if(message.content == '!인증') {
-    let Img = 'https://cdn.discordapp.com/attachments/775696488785117216/775696593897914368/411823403469635594.png';
-    if(message.channel.type == 'dm') {
-      return message.reply(Img);
-  
-  } else if(message.content == '!invite') {
-      client.guilds.array().forEach(x => {
-        x.channels.find(x => x.type == 'text').createInvite({maxAge: 0}) // maxAge: 0은 무한이라는 의미, maxAge부분을 지우면 24시간으로 설정됨
-          .then(invite => {
-            message.channel.send(invite.url)
-          })
-          .catch((err) => {
-            if(err.code == 50013) {
-              message.channel.send('**'+x.channels.find(x => x.type == 'text').guild.name+'** 채널 권한이 없어 초대코드 발행 실패')
-            }
-        })
-      });
-    } 
+  } else if(message.content == '!certified') {
+    let img = 'https://media.discordapp.net/attachments/775696488785117216/775696593897914368/411823403469635594.png';
+    let embed = new Discord.RichEmbed()
+      .setTitle('Certified Code')
+      .setImage(img)
+      .setTimestamp()
+      .setFooter('Made By KADE#7777')
+
+    message.channel.send(embed)
   }
 });
 
