@@ -4,7 +4,7 @@ const token = process.argv.length == 2 ? process.env.token : "";
 
 client.on('ready', () => {
   console.log('ON');
-  client.user.setPresence({ game: { name: 'LOVE Vencent' }, status: 'offline' })
+  client.user.setPresence({ game: { name: 'LOVE Vincent' }, status: 'offline' })
 });
 
 client.on('message', (message) => {
@@ -22,7 +22,7 @@ client.on('message', (message) => {
     ];
     let commandStr = '';
     let embed = new Discord.RichEmbed()
-      .setAuthor('Help of 콜라곰 BOT', helpImg)
+      .setAuthor('Vincent HELP', helpImg)
       .setColor('#186de6')
       .setFooter(`Vincent BOT ❤️`)
       .setTimestamp()
