@@ -4,7 +4,7 @@ const token = process.argv.length == 2 ? process.env.token : "";
 
 client.on('ready', () => {
   console.log('ON');
-  client.user.setPresence({ game: { name: 'd!help' }, status: 'offline' })
+  client.user.setPresence({ game: { name: 'LOVE Vencent' }, status: 'offline' })
 });
 
 client.on('message', (message) => {
