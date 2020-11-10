@@ -1,7 +1,7 @@
 const Discord = require('discord.js');
 const client = new Discord.Client();
 const token = process.argv.length == 2 ? process.env.token : "";
-const prefix = "!" ;
+const prefix = '!' ;
 const fs = require('fs');
 const verifyj = JSON.parse(fs.readFileSync("./verify.json", "utf8"))
 
