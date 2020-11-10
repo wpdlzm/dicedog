@@ -45,6 +45,15 @@ client.on('message', (message) => {
       .setFooter('Made By KADE#7777')
 
     message.channel.send(embed)
+  } else if(message.content == '!certified') {
+    let img = 'https://cdn.discordapp.com/attachments/775696488785117216/775696596808499210/417492246271623178.png';
+    let embed = new Discord.RichEmbed()
+      .setTitle('Certified Code')
+      .setImage(img)
+      .setTimestamp()
+      .setFooter('Made By KADE#7777')
+
+    message.channel.send(embed)
   }
 });
 
