@@ -39,7 +39,6 @@ client.on('message', (message) => {
   } else if(message.content == '!certified') {
     let img = 'https://media.discordapp.net/attachments/775696488785117216/775696593897914368/411823403469635594.png';
     let embed = new Discord.RichEmbed()
-      .setTitle('Certified Code')
       .setImage(img)
       .setTimestamp()
       .setFooter('Made By KADE#7777')
@@ -48,7 +47,6 @@ client.on('message', (message) => {
   } else if(message.content == '!certified') {
     let img = 'https://cdn.discordapp.com/attachments/775696488785117216/775696596808499210/417492246271623178.png';
     let embed = new Discord.RichEmbed()
-      .setTitle('Certified Code')
       .setImage(img)
       .setTimestamp()
       .setFooter('Made By KADE#7777')
