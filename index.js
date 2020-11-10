@@ -14,7 +14,7 @@ client.on('ready', () => {
 
 client.on('message', async message => {
     let messageArray = message.content.split(" ");
-   if(message.content === `!setcaptcha`) {
+   if(message.content === `${prefix}setcaptcha`) {
         
     let filter = m => m.author.id === message.author.id;
     let ch;
