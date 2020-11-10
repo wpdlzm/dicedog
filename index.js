@@ -22,6 +22,7 @@ client.on('message', (message) => {
     ];
     let commandStr = '';
     let embed = new Discord.RichEmbed()
+      .setImage(helpImg)
       .setAuthor('Vincent HELP', helpImg)
       .setColor('#186de6')
       .setFooter(`Vincent BOT ❤️`)
