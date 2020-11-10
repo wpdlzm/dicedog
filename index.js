@@ -14,14 +14,24 @@ client.on('message', (message) => {
     return message.reply('ok');
   }
 
-  if(message.content == 'd!help') {
-    let img = 'https://cdn.discordapp.com/attachments/773839697985667094/775173348971118632/DICE_HELP.PNG';
+  if(message.content == '!help') {
+    let helpImg = 'https://cdn.discordapp.com/attachments/775519421476765748/775656213228290068/1__6_-removebg-preview.png';
+    let commandList = [
+      {name: '!certified', desc: '인증'},
+      {name: '!hwid id pw', desc: '24시간마다 hwid를 재설정'},
+    ];
+    let commandStr = '';
     let embed = new Discord.RichEmbed()
-      .setTitle('DICE 꿀값봇 명령어')
-      .setImage(img)
-      .addBlankField()
+      .setAuthor('Help of 콜라곰 BOT', helpImg)
+      .setColor('#186de6')
+      .setFooter(`Vincent BOT ❤️`)
       .setTimestamp()
-      .setFooter('Made by KADE')
+    
+    commandList.forEach(x => {
+      commandStr += `• \`\`${changeCommandStringLength(`${x.name}`)}\`\` : **${x.desc}**\n`;
+    });
+
+    embed.addField('Commands: ', commandStr);
 
     message.channel.send(embed)
   } else if(message.content == 'd!애쉬') {
