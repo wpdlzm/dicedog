@@ -136,7 +136,7 @@ let rf = message.guild.roles.find('name', `${verifyj[message.guild.id].rolev}`)
         if (err) console.error(err)
       })
     })
-}})                           
+}});                         
 
 
 
