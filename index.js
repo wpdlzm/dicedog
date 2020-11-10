@@ -39,9 +39,12 @@ client.on('message', (message) => {
     if(message.channel.type == 'dm') {
       return message.reply(Img);
     }
-  }
-  if(message.content.startsWith('!청소')) {
-    if(checkPermission(message)) return
+  } else if(message.content.startsWith('!청소')) {
+    if(message.channel.type == 'dm') {
+      return message.reply('dm에서 사용할 수 없는 명령어 입니다.');
+    }
+    
+    if(message.channel.type != 'dm' && checkPermission(message)) return
 
     var clearLine = message.content.slice('!청소 '.length);
     var isNum = !isNaN(clearLine)
@@ -55,10 +58,9 @@ client.on('message', (message) => {
 
         var user = message.content.split(' ')[1].split('<@!')[1].split('>')[0];
         var count = parseInt(message.content.split(' ')[2])+1;
-        const _limit = 10;
         let _cnt = 0;
 
-        message.channel.fetchMessages({limit: _limit}).then(collected => {
+        message.channel.fetchMessages().then(collected => {
           collected.every(msg => {
             if(msg.author.id == user) {
               msg.delete();
