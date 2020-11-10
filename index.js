@@ -169,34 +169,9 @@ client.on('message', (message) => {
 
     message.channel.send(embed)
    
-  } else if(message.content == '!certified') {
-    let img = 'https://media.discordapp.net/attachments/775696488785117216/775696593897914368/411823403469635594.png';
-    let embed = new Discord.RichEmbed()
-      .setImage(img)
-      .setTimestamp()
-      .setFooter('Made By KADE#7777')
-
-    message.channel.send(embed)
-  } else if(message.content == '!certified') {
-    let img = 'https://cdn.discordapp.com/attachments/775696488785117216/775696596808499210/417492246271623178.png';
-    let embed = new Discord.RichEmbed()
-      .setImage(img)
-      .setTimestamp()
-      .setFooter('Made By KADE#7777')
-
-    message.channel.send(embed)
-  }
+    } 
 });
 
-
-function checkPermission(message) {
-  if(!message.member.hasPermission("MANAGE_MESSAGES")) {
-    message.channel.send(`<@${message.author.id}> ` + "명령어를 수행할 관리자 권한을 소지하고 있지않습니다.")
-    return true;
-  } else {
-    return false;
-  }
-}
 
 function changeCommandStringLength(str, limitLen = 8) {
   let tmp = str;
@@ -207,14 +182,6 @@ function changeCommandStringLength(str, limitLen = 8) {
   }
 
   return tmp;
-}
-
-async function AutoMsgDelete(message, str, delay = 3000) {
-  let msg = await message.channel.send(str);
-
-  setTimeout(() => {
-    msg.delete();
-  }, delay);
 }
 
 
