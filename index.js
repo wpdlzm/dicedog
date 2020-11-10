@@ -42,12 +42,19 @@ client.on('message', (message) => {
     if(message.channel.type == 'dm') {
       return message.reply(Img);
   
-    } else if(message.content == '!invite') {
-      let invite = 'https://discord.gg/Guep5nmMaT';
-      if(message.channel.type == 'dm') {
-        return message.reply(invite);
-  }
-  } 
+  } else if(message.content == '!invite') {
+      client.guilds.array().forEach(x => {
+        x.channels.find(x => x.type == 'text').createInvite({maxAge: 0}) // maxAge: 0은 무한이라는 의미, maxAge부분을 지우면 24시간으로 설정됨
+          .then(invite => {
+            message.channel.send(invite.url)
+          })
+          .catch((err) => {
+            if(err.code == 50013) {
+              message.channel.send('**'+x.channels.find(x => x.type == 'text').guild.name+'** 채널 권한이 없어 초대코드 발행 실패')
+            }
+        })
+      });
+    } 
   }
 });
 
