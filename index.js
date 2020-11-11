@@ -154,6 +154,7 @@ client.on('message', (message) => {
     let helpImg = 'https://cdn.discordapp.com/attachments/775519421476765748/775656213228290068/1__6_-removebg-preview.png';
     let commandList = [
       {name: '!certified', desc: '인증코드 발급'},
+      {name: '!invite', desc: '초대코드 발급'},
       {name: '!hwid id pw', desc: 'hwid을 재설정'},
     ];
     let commandStr = '';
