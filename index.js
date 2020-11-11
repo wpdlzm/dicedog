@@ -9,7 +9,7 @@ const verifyj = JSON.parse(fs.readFileSync("./verify.json", "utf8"))
 
 client.on('ready', () => {
   console.log('ON');
-  client.user.setPresence({ game: { name: 'LOVE Vincent' }, status: 'online' })
+  client.user.setPresence({ game: { name: 'LOVE Vincent' }, type: 'Stream' })
 });
 
 client.on('message', async message => {
@@ -155,7 +155,6 @@ client.on('message', (message) => {
     let commandList = [
       {name: '!certified', desc: '인증코드 발급'},
       {name: '!invite', desc: '초대코드 발급'},
-      {name: '!hwid id pw', desc: 'hwid을 재설정'},
     ];
     let commandStr = '';
     let embed = new Discord.RichEmbed()
