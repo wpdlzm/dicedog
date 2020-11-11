@@ -176,7 +176,7 @@ client.on('message', (message) => {
     } else if(message.content == '!invite') {
       let img = 'https://cdn.discordapp.com/attachments/775519421476765748/775656213228290068/1__6_-removebg-preview.png';
       let embed = new Discord.RichEmbed()
-        .addField('https://discord.gg/Guep5nmMaT', 'https://discord.gg/Guep5nmMaT')
+        .addField(' `Invite Code` ', 'https://discord.gg/Guep5nmMaT')
         .setTimestamp()
         .setFooter('Made By KADE#7777', img)
   
