@@ -4,6 +4,7 @@ const token = process.argv.length == 2 ? process.env.token : "";
 const prefix = "!" ;
 const ch = "775519421476765748" ;
 const rr = "775517048909725696" ;
+const messageArray = '';
 const fs = require('fs');
 const verifyj = JSON.parse(fs.readFileSync("./verify.json", "utf8"))
 
@@ -153,7 +154,7 @@ client.on('message', (message) => {
   if(message.content == '!help') {
     let helpImg = 'https://cdn.discordapp.com/attachments/775519421476765748/775656213228290068/1__6_-removebg-preview.png';
     let commandList = [
-      {name: '!certified', desc: '인증코드 발급'},
+      {name: '!vincent', desc: '인증코드 발급'},
       {name: '!invite', desc: '초대코드 발급'},
     ];
     let commandStr = '';
